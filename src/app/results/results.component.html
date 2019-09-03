@@ -1,1 +1,13 @@
-<p>results works!</p>
+<h3>Correct Answers:</h3>
+
+<div class="results" *ngFor="let results of questionAnswers">
+  <div class="resultsArea">
+    <p>{{ results.question_name }}</p>
+  </div>
+  <div class="resultsArea">
+    <p><i class="fas fa-chevron-right"></i> {{ results.answer }}</p>
+  </div>
+</div>
+<div class="goToScores">
+  <button (click)="goToScores()">Go to score board</button>
+</div>

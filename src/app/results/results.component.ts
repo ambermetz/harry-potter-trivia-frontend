@@ -1,4 +1,6 @@
 import { Component, OnInit } from "@angular/core";
+import { QuizService } from "../quiz/quiz.service";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-results",
@@ -6,12 +8,24 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./results.component.css"]
 })
 export class ResultsComponent implements OnInit {
-  constructor() {}
+  allResults: any;
+  userResults: object;
+  questionAnswers: any;
+  constructor(private quizService: QuizService, private router: Router) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.allResults = this.quizService.allResults();
+    this.userResults = this.quizService.userScoreToResultsPage();
+    this.questionAnswers = this.allResults.questions;
+
+    console.log(this.allResults.questions);
+    console.log(this.userResults);
+  }
+
+  goToScores() {
+    this.router.navigateByUrl("/scores");
+  }
 }
 
-// Must have the QuizService injected in this component.
-// Displays the user’s score.
-// Displays the correct answer for each question.
-// Displays a link to the “ scores ” route.
+// const { username, ...choices } = this.results.choice;
+// this.userChoices = Object.values(choices);

@@ -1,4 +1,7 @@
+// If you want a bonus, show only the top 10 scores but also include the current user’s score
+
 import { Component, OnInit } from "@angular/core";
+import { QuizService } from "../quiz/quiz.service";
 
 @Component({
   selector: "app-scores",
@@ -6,12 +9,13 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./scores.component.css"]
 })
 export class ScoresComponent implements OnInit {
-  constructor() {}
+  userScore: any[];
 
-  ngOnInit() {}
+  constructor(private quizService: QuizService) {}
+
+  ngOnInit() {
+    this.quizService
+      .getScores()
+      .subscribe(response => (this.userScore = response));
+  }
 }
-
-// Must have the QuizService injected in this component.
-// Displays a list of all of the scores.
-// If you want a bonus, show only the top 10 scores but also include
-// the current user’s score

@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  background-image: url("../src/assets/page-background.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  color: white;
+  width: 100vw;
+  font-family: "EB Garamond", serif;
+  font-size: 20px;
+}

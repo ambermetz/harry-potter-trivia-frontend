@@ -1,19 +1,47 @@
-<form #quizForm="ngForm">
-  <input type="text" name="name" ngModel placeholder="Enter your name" />
-  <button>Submit</button>
+<form class="quiz" #quizForm="ngForm" (ngSubmit)="onSubmit(quizForm)">
+  <input
+    type="text"
+    name="userName"
+    class="userName"
+    ngModel
+    placeholder="Enter your name"
+  />
   <div class="quizArea" *ngFor="let question of questions; index as i">
     <div>
-      <p>{{ question.question_name }}</p>
-      <input type="radio" name="{{ i }}" value="choice_1" />
+      <p><i class="fas fa-magic"></i> {{ question.question_name }}</p>
+      <input
+        type="radio"
+        name="{{ i }}"
+        value="{{ question.choice_1 }}"
+        ngModel
+      />
       <label for="choice_1">{{ question.choice_1 }}</label>
 
-      <input type="radio" name="{{ i }}" value="choice_2" />
+      <input
+        type="radio"
+        name="{{ i }}"
+        value="{{ question.choice_2 }}"
+        ngModel
+      />
       <label for="choice_2">{{ question.choice_2 }}</label>
-      <input type="radio" name="{{ i }}" value="choice_3" />
+      <input
+        type="radio"
+        name="{{ i }}"
+        value="{{ question.choice_3 }}"
+        ngModel
+      />
       <label for="choice_3">{{ question.choice_3 }}</label>
-      <input type="radio" name="{{ i }}" value="choice_4" />
+      <input
+        type="radio"
+        name="{{ i }}"
+        value="{{ question.choice_4 }}"
+        ngModel
+      />
       <label for="choice_4">{{ question.choice_4 }}</label>
-      <button>Submit</button>
     </div>
   </div>
+  <button>Submit</button>
 </form>
+
+<!-- <i class="fas fa-magic"></i>
+<i class="fas fa-hat-wizard"></i> -->

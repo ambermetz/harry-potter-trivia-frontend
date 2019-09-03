@@ -1,0 +1,30 @@
+h3 {
+  display: flex;
+  justify-content: center;
+}
+
+.results {
+  width: 600px;
+}
+
+.fa-chevron-right {
+  color: #ffc300;
+}
+
+.goToScores {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  color: gray;
+  padding: 5px 50px;
+  margin-top: 20px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+button:hover {
+  color: white;
+  background-color: #9e0059;
+}

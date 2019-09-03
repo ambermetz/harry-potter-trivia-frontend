@@ -1,0 +1,15 @@
+.scores {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.fa-star {
+  color: #ffc300;
+}
+
+h3 {
+  display: flex;
+  justify-content: center;
+  /* font-family: 'Great Vibes', cursive; */
+}

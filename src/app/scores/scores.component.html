@@ -1,1 +1,9 @@
-<p>scores works!</p>
+<h3>Score Board</h3>
+<div class="scores" *ngFor="let score of userScore">
+  <div class="scoreArea">
+    <p><i class="far fa-star"></i> Name: {{ score.username }}</p>
+  </div>
+  <div class="scoreArea">
+    <p>Score: {{ score.score }}</p>
+  </div>
+</div>

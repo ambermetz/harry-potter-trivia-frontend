@@ -1,0 +1,40 @@
+.quiz {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background-color: rgba(255, 255, 255, 0.493);
+  border-radius: 15px; */
+  padding: 15px 0px;
+  /* width: 70%; */
+}
+
+.fa-magic {
+  color: #ffc300;
+}
+
+.quizArea {
+  width: 90%;
+}
+
+.userName {
+  font-family: "EB Garamond", serif;
+  display: flex;
+  padding: 5px 20px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+button {
+  color: gray;
+  padding: 5px 50px;
+  margin-top: 20px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+button:hover {
+  color: white;
+  background-color: #9e0059;
+}
